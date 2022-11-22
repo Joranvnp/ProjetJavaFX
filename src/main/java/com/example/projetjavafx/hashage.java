@@ -5,7 +5,7 @@ import java.security.NoSuchProviderException;
 import java.security.SecureRandom;
 
 public class hashage {
-    public static void  hasher(String passwordToHash) throws NoSuchAlgorithmException, NoSuchProviderException
+    public static String  hasher(String passwordToHash) throws NoSuchAlgorithmException, NoSuchProviderException
     {
 
 
@@ -13,12 +13,13 @@ public class hashage {
 
         String securePassword = getSecurePassword(passwordToHash, salt);
 
-        System.out.println(securePassword);
+        //System.out.println(securePassword);
 
         String regeneratedPassowrdToVerify =
                 getSecurePassword(passwordToHash, salt);
 
-        System.out.println(regeneratedPassowrdToVerify);
+        //System.out.println(regeneratedPassowrdToVerify);
+        return securePassword;
     }
 
     private static String getSecurePassword(String passwordToHash,

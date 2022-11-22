@@ -36,7 +36,8 @@ public class HelloController {
             // Specifies the modality for new window.
             newWindow.initModality(Modality.APPLICATION_MODAL);
             newWindow.show();
-        }else{
+        }
+        else{
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Erreur de connexion");
             alert.setHeaderText("Connexion");
